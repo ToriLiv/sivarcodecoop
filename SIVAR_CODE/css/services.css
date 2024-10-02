@@ -1,0 +1,145 @@
+
+
+  /*-------------------------------------------------------------------------Control de glitch-------------------------------------------------------------------------------*/
+          body {
+              opacity: 1;
+              transition: opacity 0.5s ease-in-out;
+          }
+
+          body.fade-out {
+              opacity: 0;
+          }
+
+          body.fade-in {
+              animation: fadeInAnimation ease 0.5s;
+              animation-iteration-count: 1;
+              animation-fill-mode: forwards;
+          }
+
+          @keyframes fadeInAnimation {
+              0% {
+                  opacity: 0;
+              }
+              100% {
+                  opacity: 1;
+              }
+          }
+
+
+  /*-------------------------------------------------------------------------------------CSS SERVICES------------------------------------------------------------------------*/
+
+
+             :root {
+            --default-font: Georgia, Times, "Times New Roman", serif;
+          }
+
+
+            .subtitulo{
+            font-size: 27px;
+            text-align: center;
+          }
+
+
+          .circle {
+        		background-color: #c3ecff;
+        		margin:auto;
+        		width: 70px;
+        		height: 70px;
+        		border-radius: 50%;
+        	}
+
+        	img{
+        		margin-top: 20px;
+        		width: 30px;
+        		height:30px;
+        		margin-left: 1px;
+
+        	}
+
+        	.card{
+        		
+        		height: 16rem;
+        		border: none;
+        		box-shadow: 0px 5px 12px 8px rgba(156, 39, 176, 0.11);
+            text-align: center;
+            border-radius: 17px;
+
+        	}
+
+          .flex-container {
+            display: flex;  /*Flexbox */
+            align-items: center; /*Elementos centrados */
+            justify-content: center;
+            align-content: center;
+            margin-top: 0%;
+            flex-wrap: wrap;
+            text-overflow: ellipsis;
+            overflow-x: hidden;
+            max-width: 100%;
+          }
+          
+          .tarjetas{
+             width:15rem;
+             margin-top: 15px;
+             display: grid; 
+             margin: 1rem;
+          }
+
+
+        	.card-title{
+        		text-align: center;
+        		margin-top: 10px;
+            font-weight: bold;
+            background: linear-gradient(to right, #b046f5, #451358, #46065c, #000000);
+           -webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;
+            font-size: 22px;
+        	}
+
+          .text{
+            font-size: 16px;
+            text-align: center;
+             font-family: var(--default-font);
+          }
+
+          .subtitulo{
+            font-size: 20px;
+            text-align: center;
+            color: purple;
+          }
+
+          .titulo{
+          background: linear-gradient(to right,#28efff, #8ad8ff, #0a325c, #00c0ff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-align: center;
+          font-size: 50px;
+        }
+
+
+        .circle{
+        transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+
+         .circle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+      
+         .services{
+                transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .services:hover {
+        border-bottom: solid 5px purple;
+      }
+
+
+
+       @media screen and (min-width: 768px) {
+      .services:hover {
+        transform: translateY(-10px);
+    }
+}

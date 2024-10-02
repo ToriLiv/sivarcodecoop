@@ -1,0 +1,180 @@
+
+/*-------------------------------------------------------------------------------Control de glitch--------------------------------------------------------------------------------------*/
+    body {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+     body.fade-out {
+        opacity: 0;
+    }
+
+    body.fade-in {
+        animation: fadeInAnimation ease 0.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeInAnimation {
+        0% {
+        opacity: 0;
+              }
+        100% {
+        opacity: 1;
+        }
+    }
+
+/*----------------------------------------------------------------------------CSS ASOCIATE----------------------------------------------------------------------------------------------------*/
+
+ .titulo{
+    background: linear-gradient(to right,#28efff, #8ad8ff, #0a325c, #00c0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 50px;
+}
+
+
+   .subtitulo{
+    font-size: 32px;
+    color: purple;
+    text-align: center;
+}
+
+
+/*----------------------------------------------------------------------------FORMULARIO----------------------------------------------------------------------------------------------------*/
+
+.formulario {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+
+.forms {
+    background-color: #F5F5F5;
+    padding: 40px;
+    width: 100%;
+    height: 500px;
+    max-width: 420px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    justify-content: center; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.btns {
+    background: linear-gradient(
+        90deg,
+        rgba(153, 26, 123, 1) 0%,
+        rgba(117, 30, 156, 1) 50%
+    );
+    padding: 10px 0; 
+    width: 70%; 
+    margin: 0;
+    border: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btns:hover,
+.btns:active,
+.btns:focus {
+    color: white !important;
+    background: linear-gradient(90deg, rgba(153, 26, 123, 1) 0%, rgb(206 156 229) 50%);
+    outline: none; /* Esto elimina el contorno que algunos navegadores añaden al enfocar */
+}
+
+.input-container {
+    position: relative;
+    width: 100%; 
+}
+
+.buttons{
+
+    position: relative;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+}
+
+.input-container > i {
+    padding: 14px;
+    border-radius: 50%;
+    background: linear-gradient(
+        90deg,
+        rgba(153, 26, 123, 1) 0%,
+        rgba(117, 30, 156, 1) 50%
+    );
+    color: #FCFEF7;
+    position: absolute;
+    font-size: 20px;
+    top: 4px;
+    left: 10px;
+}
+
+.input-container > input {
+    padding: 17px 15px 17px 65px;
+    width: 100%; /*Ancho completo para los inputs */
+    margin-bottom: 25px;
+    border-radius: 35px;
+    background-color: transparent;
+    border: 2px solid #CBCBCB;
+    font-size: 16px;
+    outline: none;
+    color: #1E1E1E;
+}
+
+::placeholder {
+    color: #A0A0A0;
+    font-size: 16px;
+}
+
+form a {
+    display: block;
+    color: #A0A0A0;
+    font-size: 15px;
+    text-decoration: none;
+    margin-bottom: 25px;
+  }
+
+
+
+   @media (max-width: 768px) {
+    .subtitulo{
+    font-size: 25px;
+    color: purple;
+    text-align: center;
+}
+
+
+.des{
+    font-size: 18px;
+}
+
+}
+
+
+
+  @media (max-width: 500px) {
+    .subtitulo{
+    font-size: 22px;
+    color: purple;
+    text-align: center;
+}
+
+
+.des{
+    font-size: 17px;
+}
+
+}

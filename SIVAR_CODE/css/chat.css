@@ -1,0 +1,132 @@
+/*Contenedor del chat*/
+      .chat-container {
+          width: 280px; /*Reduce el ancho del contenedor del chat*/
+          background-color: #fff;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          overflow: hidden;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          position: fixed;
+          bottom: 70px;
+          right: 20px;
+          display: none; /*Ocultar el chat por defecto*/
+          z-index: 2;
+      }
+
+      /*Ventana del chat*/
+      .chat-window {
+          height: 290px; /*Reduce la altura de la ventana del chat*/
+          padding: 10px;
+          overflow-y: auto;
+          border-bottom: 1px solid #ccc;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          z-index: 1;
+      }
+
+      /*Respuesta del chat */
+      .message {
+          padding: 5px; /*Reduce el espacio alrededor de los mensajes*/
+          margin: 5px 0; /*Reduce el espacio entre los mensajes*/
+          border-radius: 5px;
+          background-color: #e9f6ff;
+          width: fit-content;
+          color:black;
+          align-items: flex-start;
+          max-width: 85%;
+          z-index: 1;
+          font-size: 17px;
+      }
+
+      /*Mensajes que envía el usuario*/
+      .message.mine {
+          margin-top: 10%;
+          background-color: #e78ee0;
+          align-self: flex-end;
+          z-index: 1;
+          font-size: 17px;
+      }
+
+      /*Cuadro y botón enviar*/
+      #chat-form {
+          display: flex;
+          padding: 10px;
+         
+      }
+
+      /*Cuadro donde se envía el mensaje*/
+      #message-input {
+          flex: 1;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-right: 10px;
+          width: 45px;
+          font-size: 15px;
+         
+      }
+
+      /*Botón enviar*/
+      button.chat {
+          height: 45px;
+          width: 60px;
+          background-color:#530c7d;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 15px;
+          
+         
+      }
+
+
+      /*Cierra el chat*/
+      #close-chat-btn {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          background-color: transparent;
+          border: none;
+          font-size: 20px;
+          cursor: pointer;
+          color: red;
+          font-weight: bold; 
+        
+      }
+
+      /*Icono del chat*/
+      .chat-icon {
+          position: fixed;
+          bottom: 20px;
+          right: 15px;
+          background-color: #b54df3;
+          color: #fff;
+          border-radius: 50%;
+          padding: 10px;
+          cursor: pointer;
+          font-size: 20px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          z-index: 1;
+      }
+
+      .chat-icon:hover {
+          background-color: #f708ae;
+      }
+
+      .chat-icon {
+  animation: scaleAnimation 1s infinite;
+}
+
+  @keyframes scaleAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

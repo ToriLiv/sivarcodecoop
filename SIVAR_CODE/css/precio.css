@@ -1,0 +1,182 @@
+
+/*---------------------------------------------------------------------------------Control de glitch-------------------------------------------------*/
+
+          body {
+              opacity: 1;
+              transition: opacity 0.5s ease-in-out;
+          }
+
+          body.fade-out {
+              opacity: 0;
+          }
+
+          body.fade-in {
+              animation: fadeInAnimation ease 0.5s;
+              animation-iteration-count: 1;
+              animation-fill-mode: forwards;
+          }
+
+          @keyframes fadeInAnimation {
+              0% {
+                  opacity: 0;
+              }
+              100% {
+                  opacity: 1;
+              }
+          }
+
+
+/*---------------------------------------------------------------------------------CSS PRECIO--------------------------------------------------------------------------*/
+
+          
+      :root {
+        --default-font: Georgia, Times, "Times New Roman", serif;
+      }
+
+
+          p{
+            font-size: 18px;
+            text-align: center;
+            color: purple;
+          }
+
+
+          .titulo{
+          background: linear-gradient(to right,#28efff, #8ad8ff, #0a325c, #00c0ff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-align: center;
+          font-size: 50px;
+        }
+
+
+         .btn-wrap {
+            border: 2px solid #540683;
+            margin: 4px;
+            margin-bottom: 50px;
+            transition: 0.5s;
+            border-radius: 50px;
+            padding: 12px 40px;
+            display: inline-block;
+            letter-spacing: 1px;
+            font-family: var(--poppins-font);
+            color:#540683;
+            text-decoration: none;
+        }
+
+        .btn-wrap:hover {
+            background-color: #540683;
+            color: white;
+            text-decoration: none;
+        }
+
+
+        a{
+          text-decoration: none;
+        }
+
+          .subtitulo{
+            font-size: 23px;
+            text-align: center;
+            color: purple;
+          }
+
+          .incluye{
+            text-align: center;
+            font-weight: bold;
+            font-style: italic;
+            color: purple;
+            font-size: 16px;
+          }
+
+
+        .pricing .pricing-item {
+        background-color: var(--surface-color);
+        box-shadow: 0px 5px 12px 8px rgba(209, 184, 255, 0.3);
+        padding:20px 20px;
+        height: 100%;
+        text-align: center;
+       
+        position: relative;
+        overflow: hidden;
+      }
+
+      .pricing .pricing-item h3 {
+        padding: 15px;
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .pricing .pricing-item h4 {
+        color: #540683;
+        font-size: 42px;
+        font-family: var(--default-font);
+        font-weight: 500;
+      }
+
+     
+  
+
+      .pricing .pricing-item ul {
+        padding: 20px 0;
+        list-style: none;
+        text-align: center;
+        line-height: 20px;
+        font-size: 14px;
+      }
+
+      .pricing .pricing-item ul li {
+        padding-bottom: 16px;
+      }
+
+     
+      .pricing .pricing-item .btn-wrap {
+        padding: 10px;
+        text-align: center;
+      }
+
+      .pricing .pricing-item .btn-buy {
+        color: var(--accent-color);
+        background-color: transparent;
+        border: 2px solid var(--accent-color);
+        display: inline-block;
+        border-radius: 50px;
+        font-size: 14px;
+        font-family: var(--heading-font);
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      h3{
+        color: #650065;
+      }
+
+      .incluye{
+        font-weight: bold;
+        font-style: italic;
+      }
+
+
+      li{
+        font-family: var(--default-font);
+      }
+
+
+/*---------------------------------------------------------------ANIMACIONES--------------------------------------------------------------------------------------------*/
+          .pricing-item{
+                transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pricing-item:hover {
+                 border-top: solid 6px #cd60db;
+                 border-bottom: solid 6px #cd60db;
+          }
+
+
+           @media screen and (min-width: 768px) {
+              .pricing-item:hover {
+              transform: translateY(10px);
+    }
+}
+

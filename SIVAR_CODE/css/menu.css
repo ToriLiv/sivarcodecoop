@@ -1,0 +1,168 @@
+ /*---------------------------------------------------------------------------------CSS MENU-------------------------------------------------------------------*/          
+
+           :root {
+            --roboto-font: 'Roboto', sans-serif;
+            --open-sans-font: 'Open Sans', sans-serif;
+            --poppins-font: 'Poppins', sans-serif;
+        }
+
+   /*----------------------------------------------------------------SCROLLBAR------------------------------------------------------------------------------*/
+        
+        ::-webkit-scrollbar {
+            width: 12px; 
+            height: 12px; 
+        }
+
+      
+        ::-webkit-scrollbar-thumb {
+            background-color: purple;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            height: 10px;
+        }
+
+      
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #2c6679;
+        }
+
+      
+        ::-webkit-scrollbar-track {
+            background-color: #ecf0f1;
+            border-radius: 10px;
+        }
+
+       
+        ::-webkit-scrollbar-track:hover {
+            background-color: #bdc3c7; 
+        }
+
+/*------------------------------------------------------------------------FINAL SCROLLBAR--------------------------------------------------------------------------------*/
+
+
+           .navbar-transparent {
+              background-color: transparent !important;
+            }
+
+
+            .navbar-color {
+              background:linear-gradient(to right, #540683, #3d0744, #1f3f50, #2c6679);
+            }
+
+
+/*-----------------------------------------------------------------------ESTILO MENU--------------------------------------------------------------------------------------*/
+
+
+            ul li a {
+                font-family: var(--poppins-font);
+                position: relative;
+                
+            }
+
+            .nav-link{
+                font-weight: 1200;
+                font-size: 15px;
+                margin-right: -7px;
+                color: white;
+                font-family: var(--poppins-font);
+            }
+
+           .navbar {
+            font-size: 15px;
+            font-family: "Raleway", sans-serif;
+            font-weight: bold;
+            padding:0;
+            margin:0;
+            list-style-type: none;
+            display: inline-flex;
+            overflow: hidden;
+            font-weight: bold;
+            width: 100vw;
+            height: 50px;
+            margin-top: 0px;
+            justify-content: right;
+            letter-spacing: 1px;
+            text-decoration: none;
+            z-index: 1000;
+            position: fixed;
+            space-between:15px;
+
+           }
+
+            .navbar-nav {
+                display:flex;
+                gap:10px;
+                
+            }
+
+            .navbar-nav .nav-link.active, .navbar-nav .nav-link.show,  .nav-link:hover {
+                color: lightblue;
+            }
+
+            /*hover*/
+            .navbar-links-color .nav-link:hover{
+                color: lightblue;
+            }
+
+            
+/*--------------------------------------------------------------------------MENU MOVILES-----------------------------------------------------------------------------------*/
+        
+            
+
+             @media (max-width: 767.98px) {
+            .offcanvas{
+              background:linear-gradient(to bottom, #540683, #3d0744, #1f3f50, #2c6679);
+            }
+
+             .nav-link{
+                font-weight: 1200;
+                font-size: 20px;
+                line-height: 60px;
+            }
+         }
+        
+
+            .navbar-toggler{
+                position: fixed; 
+                right: 0;  
+                height: 50px;
+                padding: 3px;
+                margin-right: 4px;
+
+            
+            }
+
+            .navbar-toggler-icon{
+                display: inline-block;
+                width: 2.5em;
+                border: none;
+                height: 3em;
+                position: relative;
+                top: -12px;
+            }
+            
+
+            .close-button {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              background: none;
+              border: none;
+              padding: 0;
+            }
+
+            .close-button img {
+              width: 40px;
+              height: 40px;
+              transition: transform 0.3s ease;
+            }
+
+            .close-button:hover img {
+              transform: scale(1.1);
+            }
+
+
+            .navbar-toggler:focus {
+            outline: none; 
+            box-shadow: none; 
+          }

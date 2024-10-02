@@ -1,0 +1,152 @@
+
+
+/*---------------------------------------------------------------------------------Control de glitch---------------------------------------------------------------*/
+          body {
+              opacity: 1;
+              transition: opacity 0.5s ease-in-out;
+          }
+
+          body.fade-out {
+              opacity: 0;
+          }
+
+          body.fade-in {
+              animation: fadeInAnimation ease 0.5s;
+              animation-iteration-count: 1;
+              animation-fill-mode: forwards;
+          }
+
+          @keyframes fadeInAnimation {
+              0% {
+                  opacity: 0;
+              }
+              100% {
+                  opacity: 1;
+              }
+          }
+
+
+
+/*----------------------------------------------------------------------------CSS NOSOTROS-------------------------------------------------------------------*/
+
+
+        :root {
+        --default-font: Georgia, Times, "Times New Roman", serif;
+      }
+
+
+       .valores {
+          list-style: none; 
+          padding: 0; 
+          margin: 0; 
+        }
+
+        .valores li {
+          display: flex; 
+          align-items: center; 
+          margin-bottom: 10px; 
+        }
+
+        .valores i {
+          color: purple; 
+          margin-right: 10px; 
+        }
+
+        .valores span {
+          color: black; 
+    }
+
+        .letra{
+            font-size: 17px;
+            font-family: var(--default-font);
+            text-align: justify;
+            text-align-last: left;
+        }
+
+        .subtitulo{
+           background:linear-gradient(to right, #f708ae, #eb45ff, #015785, #00f8ff);
+            font-size: 50px;
+            text-align: center;
+            font-weight: bold;
+            font-family: monospace; sans-serif;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+           
+          }
+
+
+        .titulo{
+          background: linear-gradient(to right,#28efff, #00aaff, #0a325c, #00c0ff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-align: center;
+          font-size: 50px;
+        }
+
+        .nosotros{
+           background: linear-gradient(to right, #b046f5, #451358, #46065c, #000000);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 38px;
+        }
+
+/*--------------------------------------------------------------------------------MEDIAS---------------------------------------------------------------------------*/
+
+     @media (max-width: 1000px) {
+              .subtitulo{
+              font-size: 45px;
+            }
+            .nosotros{
+          font-size: 40px;
+        }
+          }
+
+
+         @media (max-width: 900px) {
+          .subtitulo{
+          font-size: 40px;
+        }
+
+        .nosotros{
+          font-size: 35px;
+        }
+      }
+
+      @media (max-width: 700px) {
+          .subtitulo{
+          font-size: 35px;
+        }
+
+        .nosotros{
+          font-size: 32px;
+        }
+      }
+
+
+
+       @media (max-width: 500px) {
+          .subtitulo{
+          font-size: 30px;
+        }
+
+        .nosotros{
+          font-size: 27px;
+        }
+      }
+
+
+      
+
+/*--------------------------------------------------------------------------------ANIMACIONES---------------------------------------------------------------------------*/
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.floating-element {
+  animation: floatUpDown 3s ease-in-out infinite;
+}
